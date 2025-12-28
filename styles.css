@@ -1,0 +1,99 @@
+
+.app-shell {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+.sidebar {
+  width: 400px;
+  min-width: 400px;
+  background: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid #333;
+  padding: 40px;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+
+.autocomplete-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.location-input {
+  width: 100%;
+  padding: 15px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: white;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.location-input:focus {
+  border-color: #007bff;
+}
+
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 0 0 8px 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.suggestions-list li {
+  padding: 12px 15px;
+  cursor: pointer;
+  color: #888;
+  font-size: 13px;
+  border-bottom: 1px solid #222;
+  transition: all 0.2s;
+}
+
+.suggestions-list li:hover {
+  background: #252525;
+  color: #fff;
+  padding-left: 20px;
+}
+
+
+.scan-button {
+  width: 100%;
+  padding: 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.results-card {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid #333;
+}
+
+.status-badge { font-size: 14px; margin-bottom: 10px; }
+.danger { color: #ff4d4d; }
+.safe { color: #00ff88; }
